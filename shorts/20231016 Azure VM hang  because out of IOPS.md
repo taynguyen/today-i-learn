@@ -20,5 +20,8 @@ systemctl stop apt-daily.timer
 sudo systemctl disable apt-daily.timer
 ```
 
+Few days later the IOPS is still not stable. The IOPS very high if the sqlite file about 200MB. I checked around, seem the OS having some issue when disrupting the OS upgrade last time (From 20 -> 22 LTS). 
+I decided to create new machine with fresh latest LTS os. 
+
 ## Results
-After few days, the IOPS is stable, and the system is not hang anymore. I could ssh to the VM without any issue. I think that the system update is the root cause of the issue. I will try to enable the timer again to see if the issues come bac, or this could be for future.
+The IOPS is stable, and the system is not hang anymore. I could ssh to the VM without any issue.
